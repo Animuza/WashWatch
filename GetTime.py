@@ -6,11 +6,12 @@ def getTime():
 	os.system('ssocr -T -f white -b black -d -1 -C /home/pi/share/test_pi_3.jpeg > /home/pi/share/output')
 	f=open('/home/pi/share/output', 'r')
 	data = f.read()
-	"print(len(data))"
-	"print(data)"
 	"Ein ':' wird in den String eingefügt, damit an der Ausgabe nichts mehr verändert werden muss"
-	data_neu = data[0]+':'+data[1]+data[2]
-	print(data_neu)
+	if len(data) > 4:
+		data_neu = data[0]+data[1]+':'+data[2]+data[3]
+	else:
+		data_neu = data[0]+':'+data[1]+data[2]
+	"print(data_neu)"
 	return data_neu
 
 def main():
