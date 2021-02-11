@@ -11,7 +11,7 @@ def takePicture():
 
     camera.start_preview()
     sleep(2)
-    camera.capture('/home/pi/share/picture.jpeg')
+    camera.capture('files/picture.jpeg')
     camera.stop_preview()
     camera.close() 
 
