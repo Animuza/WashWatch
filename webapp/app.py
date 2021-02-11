@@ -9,7 +9,7 @@ from flask_bootstrap import Bootstrap
 
 cwd = os.getcwd()
 
-IMAGES_FOLDER = os.path.join('static/images')
+IMAGES_FOLDER = os.path.join(cwd, 'files')
 IMAGES_READ_FOLDER = os.path.join(cwd, 'files/picture.jpeg')
 OUTPUT_FOLDER = os.path.join(cwd, 'files/output.txt')
 
