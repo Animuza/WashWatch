@@ -32,7 +32,7 @@ app.config['UPLOAD_FOLDER'] = IMAGES_FOLDER
 
 @app.route('/')
 def index():
-    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'droplets.jpg')
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'WashWatch_blau.png')
     print(full_filename)
     p.example("Welcome")
     return render_template('index.html', user_image=full_filename, time="")
@@ -40,7 +40,7 @@ def index():
 
 @app.route('/update_results', methods=['POST', 'GET'])
 def update_results():
-    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'painting.jpg')
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'picture.jpg')
     print(full_filename)
     #The next line needs to be uncommented, when a camera is adapted!
     #pic.takePicture()
