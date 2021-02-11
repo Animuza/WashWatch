@@ -1,0 +1,2 @@
+Flask~=1.1.2
+pywebpush~=1.11.0
