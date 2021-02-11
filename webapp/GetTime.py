@@ -4,7 +4,7 @@ import os
 def getTime():
 	
 	os.system('ssocr -T -f white -b black -d -1 -C files/picture.jpeg > files/output')
-	f=open('output', 'r')
+	f=open('files/output', 'r')
 	data = f.read()
 	"Ein ':' wird in den String eingefügt, damit an der Ausgabe nichts mehr verändert werden muss"
 	if len(data) > 4:
