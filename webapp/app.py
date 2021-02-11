@@ -9,7 +9,7 @@ from flask_bootstrap import Bootstrap
 
 cwd = os.getcwd()
 
-IMAGES_FOLDER = os.path.join(cwd, 'files')
+IMAGES_FOLDER = os.path.join('static/images')
 IMAGES_READ_FOLDER = os.path.join(cwd, 'files/picture.jpeg')
 OUTPUT_FOLDER = os.path.join(cwd, 'files/output.txt')
 
@@ -40,7 +40,7 @@ def index():
 
 @app.route('/update_results', methods=['POST', 'GET'])
 def update_results():
-    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'picture.jpg')
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'painting.jpg')
     print(full_filename)
     #The next line needs to be uncommented, when a camera is adapted!
     #pic.takePicture()
