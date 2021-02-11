@@ -9,16 +9,15 @@ def takePicture():
 
     camera = PiCamera()
 
-    camera.start_preview()
-    sleep(2)
-    camera.capture('files/picture.jpeg')
-    camera.stop_preview()
-    camera.close() 
+    camera.start_preview() //aktivieren der Kamera
+    sleep(2) //Zeit damit Kamera sich fokussieren kann 
+    camera.capture('files/picture.jpeg') //Bild wird im Ordner files als picture.jpeg abgespeichert
+    camera.stop_preview() //Deaktivieren der Kamera
+    camera.close() //Schließen der Kamera 
 
 
 def main():
     takePicture()
-    # getTime()
 
 if __name__ == "__main__":
     # execute only if run as a script
