@@ -17,18 +17,19 @@
     <title>Your WashApp</title>
   </head>
   <body>
+    <!-- Überschrift -->
     <h1>Welcome to WashApp!</h1>
     <p>Time remainig:</p>
+    <!-- Anzeige des Bildes -->
     <img class="rounded mx-auto d-block" src="{{ user_image }}" alt="Image not found" width="500" height="300" >
+    <!-- Anzeige der restlichen Zeit -->
     <p>Time left: {{time}}</p>
     <form action="/update_results" method="GET">
         <input type="submit" class="btn btn-primary btn-lg" value="Update" /input>
     </form>
     <p></p>
-    <form action="/see_pic" method="GET">
-        <input type="submit" class="btn btn-primary btn-lg" value="Show Machine" /input>
-    </form>
-
+    
+    <!-- Für Push- Benachrichtigungen -->
     <!-- Optional JavaScript -->
     <script
 		type="text/javascript"
