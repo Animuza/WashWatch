@@ -8,10 +8,16 @@ def getTime():
 	data = f.read()
 	"Ein ':' wird in den String eingefügt, damit an der Ausgabe nichts mehr verändert werden muss"
 	if len(data) > 4:
-		data_neu = data[0]+data[1]+':'+data[2]+data[3]
+		if(data[2]='1'):
+			data_neu = data[0]+data[1]+':'+data[3]+data[4]
+		else:
+			data_neu = data[0]+data[1]+':'+data[2]+data[3]		
 	else:
-		data_neu = data[0]+':'+data[1]+data[2]
-	"print(data_neu)"
+		if(data[1]='1'):
+			data_neu = data[0]+':'+data[2]+data[3]
+		else:
+			data_neu = data[0]+':'+data[1]+data[2]
+	print(data_neu)
 	return data_neu
 
 def main():
