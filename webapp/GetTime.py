@@ -1,8 +1,8 @@
 #Modul zur Bestimmung der verbleibenden Restzeit der Waschmaschine
+
 import os
 
 def getTime():
-	
 	os.system('ssocr -T -f white -b black -d -1 -C files/picture.jpeg > files/output')
 	f=open('files/output', 'r')
 	data = f.read()
