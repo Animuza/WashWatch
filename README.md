@@ -1,4 +1,5 @@
 # WashApp
+# Branch: Relative Pfade --> Ordnerstruktur so, dass der gesamte Code in webapp liegt
 
 Notwendige Packages:
 sudo apt install ssocr
