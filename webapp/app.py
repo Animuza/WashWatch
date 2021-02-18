@@ -7,6 +7,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
 
+
 # Im Folgenden sind sämtliche verwendete Pfade aufgeführt, die weiter unten benutzt werden.
 cwd = os.getcwd()
 
@@ -74,5 +75,7 @@ def create_push_subscription():
 # Main
 if __name__ == '__main__':
     app.config["BOOTSTRAP_SERVE_LOCAL"] = True
+
     app.run(debug=True, host='0.0.0.0')
+
     
