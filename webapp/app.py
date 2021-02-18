@@ -42,7 +42,7 @@ def index():
 # Auf dieser Seite wird die aktuelle Zeit abgerufen und angezeigt.
 @app.route('/update_results', methods=['POST', 'GET'])
 def update_results():
-    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'painting.jpg')
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'WashWatch_blau.png')
     print(full_filename)
     #The next line needs to be uncommented, when a camera is adapted!
     #pic.takePicture()
