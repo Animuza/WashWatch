@@ -3,11 +3,12 @@ import os
 
 def getTime():
 	
-	os.system('ssocr -T -f white -b black -d -1 -C files/picture.jpeg > files/output')
+	os.system('ssocr -T -f white -b black -d -1 -C files/picture_1.jpg > files/output')
 	f=open('files/output', 'r')
 	data = f.read()
 	"Ein ':' wird in den String eingefügt, damit an der Ausgabe nichts mehr verändert werden muss"
 	if len(data) > 4:
+		"Der Doppelpunkt wird oft als 1 erkannt"
 		if(data[2]=='1'):
 			data_neu = data[0]+data[1]+':'+data[3]+data[4]
 		else:
