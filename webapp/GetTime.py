@@ -1,4 +1,4 @@
-"Modul zur Bestimmung der verbleibenden Restzeit der Waschmaschine"
+#Modul zur Bestimmung der verbleibenden Restzeit der Waschmaschine
 import os
 
 def getTime():
