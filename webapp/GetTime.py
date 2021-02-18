@@ -3,23 +3,23 @@ import os
 
 def getTime():
 	
-	os.system('ssocr -T -f white -b black -d -1 -C files/picture_1.jpg > files/output')
+	os.system('ssocr -T -f white -b black -d -1 -C files/picture.jpg > files/output')
 	f=open('files/output', 'r')
 	data = f.read()
-	"Ein ':' wird in den String eingefügt, damit an der Ausgabe nichts mehr verändert werden muss"
-	"XX:XX-Digitalanzeige"
-	if len(data) > 5:
-		"Der Doppelpunkt wird oft als 1 erkannt"
-		if(data[2]=='1'):
+	# Ein ':' wird in den String eingefügt, damit an der Ausgabe nichts mehr verändert werden muss
+	# XX:XX-Digitalanzeige
+	if len(data) == 6:
 			data_neu = data[0]+data[1]+':'+data[3]+data[4]
-		else:
-			data_neu = data[0]+data[1]+':'+data[2]+data[3]
+	#X:XX-Digitalanzeige
+	elif len(data) ==5:
+			data_neu= data_neu = data[0]+':'+data[2]+data[3]
+	#XXX-Digitalanzeige (ohne Doppelpunkt)
 	elif len(data) == 4:
 		data_neu = data[0]+':'+data[1]+data[2]
+	#Definition eines neuen Zahlenformats der Digitalanzeige notwendig oder Qualität des Bildes unzureichend, bzw. nicht richtig positioniert
 	else: 
-		if(data[1]=='1'):
-			data_neu = data[0]+':'+data[2]+data[3]
-	print(data_neu)
+		data_neu ='Ungültiges Zahlenformat oder Bildqualität zu schlecht, bzw. falsche Positionierung' 
+	#print(data_neu)
 	return data_neu
 
 def main():
